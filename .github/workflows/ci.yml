@@ -18,3 +18,9 @@ jobs:
         run: |
           echo "Job Context: $JOB_CONTEXT"
           echo "Done!"
+      
+      - name: Install dependecies
+        run: composer install --ignore-platform-reqs
+
+      - name: Run the tests
+        run: composer run test
